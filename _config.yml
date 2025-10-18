@@ -1,0 +1,74 @@
+# Site Settings
+title: "HLT Portfolio"
+name: "Wade Swede"
+email: wade.swede91@gmail.com
+description: >-
+  Portfolio website showcasing Human Language Technology projects and professional work.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://wadeswede.github.io" # the base hostname & protocol for your site
+repository: "wadeswede/wadeswede.github.io"
+
+# Build Settings
+markdown: kramdown
+remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+# Outputting
+permalink: /:categories/:title/
+paginate: 5
+paginate_path: /page:num/
+timezone: America/New_York # Change to your timezone
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
+# Site Author
+author:
+  name: "Wade Swede"
+  avatar: "/assets/images/profile.jpg" # path to profile image
+  bio: "MS in Human Language Technology student specializing in NLP and computational linguistics"
+  location: "Northern Virginia"
+  email: wade.swede91@gmail.com
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/wswede1"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/wade-swede-601baa99/" 
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:path/
+
+include:
+  - _pages
+
