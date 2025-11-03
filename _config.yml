@@ -5,8 +5,8 @@ email: wade.swede91@gmail.com
 description: >-
   Portfolio website showcasing Human Language Technology projects and professional work.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://wadeswede.github.io" # the base hostname & protocol for your site
-repository: "wadeswede/wadeswede.github.io"
+url: "https://wswede1.github.io" # the base hostname & protocol for your site
+repository: "wswede1/wswede1.github.io"
 
 # Build Settings
 markdown: kramdown

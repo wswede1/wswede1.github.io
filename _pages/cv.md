@@ -6,13 +6,13 @@ author_profile: true
 toc: true
 ---
 
-# Your Name
+# Wade Swede
 
-**Email:** your.email@example.com  
-**LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)  
-**GitHub:** [github.com/yourusername](https://github.com/yourusername)
+**Email:** wade.swede91@gmail.com  
+**LinkedIn:** [linkedin.com/in/wade-swede-601baa99](https://www.linkedin.com/in/wade-swede-601baa99/)  
+**GitHub:** [github.com/wswede1](https://github.com/wswede1)
 
-[**Download PDF Version**](/assets/cv/resume.pdf)
+[**Download PDF Resume**](/assets/cv/wswede_resume.pdf)
 
 ---
 
@@ -20,34 +20,34 @@ toc: true
 
 **Master of Science in Human Language Technology**  
 University of Arizona, Tucson, AZ  
-Expected Graduation: [Month Year]  
-GPA: [Your GPA]
+Expected Graduation: 2025
 
-**[Your Bachelor's Degree]**  
-[University Name], [Location]  
-Graduation: [Month Year]  
-GPA: [Your GPA]
+**Bachelor of Arts in Spanish**  
+[University Name]  
+[Graduation Year]
 
 ---
 
 ## Professional Experience
 
-### [Internship Title]
-**[Company/Organization Name]** | [Location]  
-[Start Date] - [End Date]
+### NLP/RAG Systems Intern
+**Epistemix** | Remote  
+Summer/Fall 2024
 
-- [Key responsibility/accomplishment demonstrating HLT skills]
-- [Specific project or task with measurable outcomes]
-- [Technologies and methodologies applied]
-- [Impact on team or organization]
+- Developed comprehensive RAG system for semantic search over podcast transcripts
+- Transcribed 24 episodes using Whisper on high-performance computing infrastructure
+- Built full-stack application with FastAPI backend and Streamlit frontend
+- Implemented vector database using ChromaDB with BGE-M3 embeddings
+- Created 970 searchable text chunks with intelligent boundary preservation
+- Integrated Ollama for LLM-powered question answering with citations
 
-### [Previous Relevant Position if applicable]
-**[Company Name]** | [Location]  
-[Start Date] - [End Date]
+### Spanish & English Language Teacher
+**Various Schools** | Chile and Spain  
+[Years]
 
-- [Key responsibilities]
-- [Major accomplishments]
-- [Relevant skills demonstrated]
+- Taught Spanish and English to international students in Southern Chile and Valencia, Spain
+- Developed curriculum and materials for language instruction
+- Worked with diverse student populations and cultural backgrounds
 
 ---
 
@@ -55,87 +55,63 @@ GPA: [Your GPA]
 
 **Programming Languages:**
 - Python (Advanced)
-- [Other languages with proficiency levels]
+- SQL
 
 **NLP & Machine Learning:**
-- Natural Language Processing libraries: spaCy, NLTK, Gensim
-- Deep Learning frameworks: PyTorch, TensorFlow, Hugging Face Transformers
+- Natural Language Processing: spaCy, NLTK, transformers, sentence-transformers
+- Embeddings: BGE models, semantic search, vector databases
+- LLM Integration: LangChain, Ollama, prompt engineering
 - Machine Learning: scikit-learn, pandas, numpy
-- [Other specific NLP tools]
 
 **Development & Tools:**
+- Backend: FastAPI, RESTful APIs
+- Frontend: Streamlit
 - Version Control: Git, GitHub
-- Development Environments: Jupyter, VS Code, PyCharm
-- Cloud Platforms: [AWS, Google Cloud, Azure - if applicable]
-- Databases: [SQL, MongoDB - if applicable]
-- [Other relevant tools]
+- Databases: ChromaDB, SQLite
+- HPC: SLURM, GPU computing
+- Audio Processing: OpenAI Whisper
 
 **NLP Techniques:**
-- [List specific techniques you're proficient in, e.g.:]
-- Text classification and sentiment analysis
-- Named Entity Recognition (NER)
-- Information extraction
-- Machine translation
-- Language modeling
-- [etc.]
+- Retrieval-Augmented Generation (RAG)
+- Semantic search and similarity matching
+- Text chunking and preprocessing
+- Information retrieval
+- Maximum Marginal Relevance (MMR)
+- Speech-to-text transcription
 
 ---
 
 ## Academic Projects
 
-### LING 508: [Course Name] - [Project Title]
-**Semester:** [Semester Year]
+### LING 508: Yoga Pose Recommendation System
+**Semester:** [2024]
 
-[Brief description of project, 2-4 sentences highlighting the technical challenge and your approach]
+Developed a full-stack application that recommends yoga poses based on user-specified body parts. Built database schema for pose-body part associations, implemented backend API for querying, and created user-friendly frontend interface.
 
-**Technologies:** Python, [specific libraries]  
-**Repository:** [Link to GitHub repo if available]
-
-### [Other Course Project]
-**LING [XXX]:** [Course Name]  
-**Semester:** [Semester Year]
-
-[Brief description]
+**Technologies:** Python, [Database], [Web Framework]  
+**Repository:** [View detailed project description](/ling508/)
 
 ---
 
 ## Relevant Coursework
 
 **Core HLT Courses:**
-- LING 508: [Course Name]
-- LING 539: [Course Name]
-- LING [XXX]: [Course Name]
-- [Add all relevant courses]
+- LING 508: Human Language Technology Tools and Frameworks
+- [Additional HLT courses taken]
 
 **Supporting Courses:**
-- [Statistical courses]
-- [Computer Science courses]
-- [Linguistics courses]
+- [Computational linguistics courses]
+- [Machine learning courses]
+- [Programming courses]
 
 ---
-
-## Publications & Presentations
-
-[If applicable, list any papers, presentations, or conference attendance]
-
-**[Conference/Course Name]**  
-"[Title of presentation/paper]"  
-[Date]
-
----
-
-## Professional Development
-
-- Member, [relevant professional organizations]
-- Attended [relevant conferences or workshops]
-- [Certifications if applicable]
 
 ---
 
 ## Languages
 
-- English: [Native/Fluent]
-- [Other languages with proficiency levels]
+- English: Native
+- Spanish: Fluent (BA in Spanish, teaching experience)
 
 ---
 
@@ -145,5 +121,5 @@ Available upon request
 
 ---
 
-*Last Updated: [Current Date]*
+*Last Updated: November 2024*
 
