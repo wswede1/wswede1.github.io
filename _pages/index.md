@@ -31,7 +31,9 @@ Another project I particularly enjoyed during my time in the HLT program was a y
 
 My professional interests center on practical applications of NLP that solve real-world problems, particularly in education. Technology has provided countless educational opportunities to people all across the globe, and I look forward to making a meaningful contribution to that effort.
 
-When I'm not teaching or reading the latest research, I spend my time obsessing over the perfect home-cooked meal, doing yoga, and exploring local trails with my dog.
+
+## Personal
+When I'm not teaching or reading the latest research, I spend my time obsessing over making the perfect home-cooked meal, doing yoga, and exploring local trails with my dog.
 
 ---
 

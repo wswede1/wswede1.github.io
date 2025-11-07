@@ -6,7 +6,7 @@ author_profile: true
 toc: true
 ---
 
-# Wade Swede
+# Wade A. Swede
 
 **Email:** wade.swede91@gmail.com  
 **LinkedIn:** [linkedin.com/in/wade-swede-601baa99](https://www.linkedin.com/in/wade-swede-601baa99/)  
@@ -20,98 +20,93 @@ toc: true
 
 **Master of Science in Human Language Technology**  
 University of Arizona, Tucson, AZ  
-Expected Graduation: 2025
+Expected Graduation Date: Winter 2025
 
-**Bachelor of Arts in Spanish**  
-[University Name]  
-[Graduation Year]
+**Master of Arts in Foreign Languages**
+Concentration: Spanish & Bilingual-Multicultural Education
+George Mason University, Fairfax, VA
+Graduation Date: Spring 2019
+
+**Bachelor of Arts in Hispanic Languages and Literatures**  
+University of Pittsburgh, Pittsburgh, PA  
+Graduation Date: Spring 2014
 
 ---
 
 ## Professional Experience
 
-### NLP/RAG Systems Intern
-**Epistemix** | Remote  
-Summer/Fall 2024
+### Spanish Language Teacher
+**Manassas City Public Schools** | Manassas, VA
+September 2025 - Present
+- Design and deliver AI-enhanced Spanish curricula by integrating generative language models for personalized instruction and tutoring.
+- Implement differentiated instruction strategies to meet diverse learner needs, including heritage speakers, English language learners, and students with varying proficiency levels.
+- Utilize formative assessment data to track student progress and adjust instructional strategies.
+- Leverage firsthand international teaching experience in Chile and Spain to integrate authentic cultural materials and perspectives, fostering cross-cultural competency and global awareness.
 
-- Developed comprehensive RAG system for semantic search over podcast transcripts
-- Transcribed 24 episodes using Whisper on high-performance computing infrastructure
+### NLP Intern
+**Epistemix** | Remote  
+Summer/Fall 2025
+
+- Developed Retrieval Augmented Generation (RAG) system for semantic search over podcast transcripts.
+- Transcribed 24 episodes using Whisper on UofA high-performance computing infrastructure
 - Built full-stack application with FastAPI backend and Streamlit frontend
 - Implemented vector database using ChromaDB with BGE-M3 embeddings
-- Created 970 searchable text chunks with intelligent boundary preservation
 - Integrated Ollama for LLM-powered question answering with citations
 
-### Spanish & English Language Teacher
-**Various Schools** | Chile and Spain  
-[Years]
+### Previous Experience
 
-- Taught Spanish and English to international students in Southern Chile and Valencia, Spain
-- Developed curriculum and materials for language instruction
-- Worked with diverse student populations and cultural backgrounds
+### Data Curator & Conversation Agent Designer
+**ASAPP** | Remote
+April 2022 - June 2025
 
----
+- Designed and optimized enterprise-grade conversational AI agents using prompt engineering and data-driven interaction design, improving resolution rates across multiple client deployments.
+- Conducted scenario testing and workflow mapping to evaluate agent behavior in real-world customer journeys; iterated configurations based on qualitative insights and quantitative performance metrics.
+- Led large-scale annotation and experimentation projects (speech + text), developing style guides, QA protocols, and vendor management to improve human–AI customer service interactions.
 
-## Technical Skills
+### Graduate Teaching Assistant
+**George Mason University & University of Arizona** | Fairfax, VA & Tucson, AZ
+August 2017 - December 2018, August 2020 - October 2021
 
-**Programming Languages:**
-- Python (Advanced)
-- SQL
+### Spanish Language Teacher
+**Prince William County Public Schools** | Manassas, VA
+August 2016 - June 2017, August 2018 - June 2019
 
-**NLP & Machine Learning:**
-- Natural Language Processing: spaCy, NLTK, transformers, sentence-transformers
-- Embeddings: BGE models, semantic search, vector databases
-- LLM Integration: LangChain, Ollama, prompt engineering
-- Machine Learning: scikit-learn, pandas, numpy
-
-**Development & Tools:**
-- Backend: FastAPI, RESTful APIs
-- Frontend: Streamlit
-- Version Control: Git, GitHub
-- Databases: ChromaDB, SQLite
-- HPC: SLURM, GPU computing
-- Audio Processing: OpenAI Whisper
-
-**NLP Techniques:**
-- Retrieval-Augmented Generation (RAG)
-- Semantic search and similarity matching
-- Text chunking and preprocessing
-- Information retrieval
-- Maximum Marginal Relevance (MMR)
-- Speech-to-text transcription
+### English Language Teacher
+**Liceo Comercial Armando Bravo Bravo / CEIP Luis Vives** | Angol, Chile and Silla, Spain  
+July - December 2015, September 2019 - June 2020
 
 ---
 
-## Academic Projects
+## Graduate Coursework
 
-### LING 508: Yoga Pose Recommendation System
-**Semester:** [2024]
+**Core HLT Coursework**
 
-Developed a full-stack application that recommends yoga poses based on user-specified body parts. Built database schema for pose-body part associations, implemented backend API for querying, and created user-friendly frontend interface.
+### LING 503: Syntax I
+### LING 508: Computational Techniques for Linguists
+### LING 529: HLT I
+### LING 538: Computational Linguistics
+### LING 539: HLT II
+### LING 578: Speech Language Technology
+### LING 581: Advanced Computational Linguistics
+### LING 582: Advanced Statistical NLP
+### LING 696: Advanced Speech and Language Technology
 
-**Technologies:** Python, [Database], [Web Framework]  
-**Repository:** [View detailed project description](/ling508/)
-
----
-
-## Relevant Coursework
-
-**Core HLT Courses:**
-- LING 508: Human Language Technology Tools and Frameworks
-- [Additional HLT courses taken]
 
 **Supporting Courses:**
-- [Computational linguistics courses]
-- [Machine learning courses]
-- [Programming courses]
 
----
-
+### SPAN 574A: Heritage Language Research
+### SPAN 580A: Spanish Phonology I
+### SPAN 580B: Spanish Phonology II
+### SPAN 581A: Foreign Language Teaching Theory and Methodology
+### SPAN 583A: Spanish Phonetics
+### SPAN 587A: Introduction to Pragmatics
 ---
 
 ## Languages
 
 - English: Native
-- Spanish: Fluent (BA in Spanish, teaching experience)
+- Spanish: Fluent
+- Portuguese: Conversational
 
 ---
 
@@ -121,5 +116,5 @@ Available upon request
 
 ---
 
-*Last Updated: November 2024*
+*Last Updated: November 2025*
 
