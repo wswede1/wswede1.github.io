@@ -99,6 +99,7 @@ July - December 2015, September 2019 - June 2020
 - SPAN 581A: Foreign Language Teaching Theory and Methodology
 - SPAN 583A: Spanish Phonetics
 - SPAN 587A: Introduction to Pragmatics
+
 ---
 
 ## Languages
