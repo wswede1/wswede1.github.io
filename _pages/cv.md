@@ -22,9 +22,9 @@ toc: true
 University of Arizona, Tucson, AZ  
 Expected Graduation Date: Winter 2025
 
-**Master of Arts in Foreign Languages**
-Concentration: Spanish & Bilingual-Multicultural Education
-George Mason University, Fairfax, VA
+**Master of Arts in Foreign Languages**  
+Concentration: Spanish & Bilingual-Multicultural Education  
+George Mason University, Fairfax, VA  
 Graduation Date: Spring 2019
 
 **Bachelor of Arts in Hispanic Languages and Literatures**  
@@ -81,25 +81,24 @@ July - December 2015, September 2019 - June 2020
 
 **Core HLT Coursework**
 
-### LING 503: Syntax I
-### LING 508: Computational Techniques for Linguists
-### LING 529: HLT I
-### LING 538: Computational Linguistics
-### LING 539: HLT II
-### LING 578: Speech Language Technology
-### LING 581: Advanced Computational Linguistics
-### LING 582: Advanced Statistical NLP
-### LING 696: Advanced Speech and Language Technology
-
+- LING 503: Syntax I
+- LING 508: Computational Techniques for Linguists
+- LING 529: HLT I
+- LING 538: Computational Linguistics
+- LING 539: HLT II
+- LING 578: Speech Language Technology
+- LING 581: Advanced Computational Linguistics
+- LING 582: Advanced Statistical NLP
+- LING 696: Advanced Speech and Language Technology
 
 **Supporting Courses:**
 
-### SPAN 574A: Heritage Language Research
-### SPAN 580A: Spanish Phonology I
-### SPAN 580B: Spanish Phonology II
-### SPAN 581A: Foreign Language Teaching Theory and Methodology
-### SPAN 583A: Spanish Phonetics
-### SPAN 587A: Introduction to Pragmatics
+- SPAN 574A: Heritage Language Research
+- SPAN 580A: Spanish Phonology I
+- SPAN 580B: Spanish Phonology II
+- SPAN 581A: Foreign Language Teaching Theory and Methodology
+- SPAN 583A: Spanish Phonetics
+- SPAN 587A: Introduction to Pragmatics
 ---
 
 ## Languages
