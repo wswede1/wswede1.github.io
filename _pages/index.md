@@ -1,6 +1,7 @@
 ---
 layout: home
 author_profile: true
+permalink: /
 title: "Wade A. Swede"
 header:
   overlay_color: "#000"
