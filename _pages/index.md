@@ -8,6 +8,8 @@ header:
   overlay_filter: "0.5"
   overlay_image: /assets/images/header.jpg
   actions:
+    - label: "View CV"
+      url: "/cv/"
     - label: "View Projects"
       url: "/projects/"
 excerpt: "Ruminations on Language, Technology, and Intelligence"
