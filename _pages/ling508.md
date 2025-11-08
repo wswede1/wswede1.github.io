@@ -12,7 +12,6 @@ toc_sticky: true
 
 **Course:** LING 508 – Computational Techniques for Linguists  
 **Semester:** Summer 2024  
-**Instructor:** Dr. Eric Jackson
 
 ---
 
