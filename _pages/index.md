@@ -12,7 +12,7 @@ header:
       url: "/cv/"
     - label: "View Projects"
       url: "/projects/"
-excerpt: "Ruminations on Language, Technology, and Intelligence"
+excerpt: "Linguist | Educator"
 ---
 
 # Introduction

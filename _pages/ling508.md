@@ -22,6 +22,8 @@ YogaDB is the modernized version of my final class assignment for LING 508, Comp
 
 I improved YogaDB so it was more aesthetically pleasing and I thought it might actually be useful to someone other than me. When the page loads it immediately shows sample results, which helps people understand what the app does right away. The interface lets you search with either a dropdown menu or by typing your own keywords, and the results display clearly with pose names, instructions, and the body parts each pose targets. 
 
+![Screenshot of the YogaDB interface showing pose cards for hips](/assets/images/ling508_ui.png)
+
 
 **Technologies Used:** Python 3.11, Flask, Flask-CORS, MySQL 8, mysql-connector-python, Bootstrap 5, Docker, Pytest  
 **Repository:** [https://github.com/wswede1/yoga_project](https://github.com/wswede1/yoga_project)
@@ -49,6 +51,11 @@ I worked on this iteratively, starting with the backend and then moving to the f
 ### System Architecture
 
 YogaDB follows a three-layer architecture that keeps different concerns separated. The presentation layer is a single `index.html` Jinja2 template rendered by Flask. It loads Bootstrap 5, applies a custom gradient theme, and uses Jinja2 template syntax to render pose cards server-side. The service layer is handled by `YogaService`, which encapsulates business logic like input normalization and mapping database rows to JSON-friendly dictionaries. Flask routes import the service, handle HTTP concerns like validation, logging, and status codes, and delegate the actual data fetching to the service layer. The persistence layer uses `MySQLRepository`, which implements the Repository interface with parameterized SQL queries against a Dockerized MySQL 8 instance. Using dependency injection through the interface allows tests to swap the real repository for a stub, which means I can test service logic without needing MySQL running. This separation makes it easy to iterate on the UI without touching SQL, and to test different parts of the application independently.
+
+<video controls width="720" poster="/assets/images/ling508_ui.png">
+  <source src="/assets/clips/ling508_demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Dataset
 
