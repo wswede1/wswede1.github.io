@@ -1,6 +1,6 @@
 ---
 permalink: /projects/ling508/
-title: "LING 508 Project"
+title: "YogaDB | LING 508 Project"
 layout: single
 author_profile: true
 toc: true
@@ -8,42 +8,39 @@ toc_label: "Contents"
 toc_sticky: true
 ---
 
-# [LING 508 Project Title]
+# YogaDB
 
-**Course:** LING 508 - [Full Course Name]  
-**Semester:** [Semester and Year]  
-**Instructor:** [Instructor Name]  
-**Team:** [Solo project / Team of X members]
+**Course:** LING 508 – Computational Techniques for Linguists  
+**Semester:** Summer 2024  
+**Instructor:** Dr. Eric Jackson
 
 ---
 
-## Executive Summary
+## Summary & Motivation
 
-[Write 2-3 paragraphs providing a high-level overview of the project, the problem you were solving, and your approach. This should engage readers and give context for the detailed description.]
+YogaDB is the modernized version of my final class assignment for LING 508, Computational Techniques for Linguists. This updated version maintains much of the original Flask application, and has an improved UI and an updated database of 100 yoga poses. The project began as a simple API that returned a yoga pose matching the body part the user selected.
 
-**Technologies Used:** Python, [specific libraries and tools]  
-**Repository:** [Link to cleaned-up GitHub repository]
+I improved YogaDB so it was more aesthetically pleasing and I thought it might actually be useful to someone other than me. When the page loads it immediately shows sample results, which helps people understand what the app does right away. The interface lets you search with either a dropdown menu or by typing your own keywords, and the results display clearly with pose names, instructions, and the body parts each pose targets. 
+
+
+**Technologies Used:** Python 3.11, Flask, Flask-CORS, MySQL 8, mysql-connector-python, Bootstrap 5, Docker, Pytest  
+**Repository:** [https://github.com/wswede1/yoga_project](https://github.com/wswede1/yoga_project)
 
 ---
 
 ## Project Overview
 
-### What I Did
+### Project Scope
 
-[Describe what you accomplished in this project. Be specific about your contributions, especially if it was a team project.]
+I built a full-stack yoga pose finder that helps people find poses based on the body parts they want to target. The app separates the frontend interface from the backend logic and database, which made it easier to work on different parts independently. I created a dataset of 100 yoga poses with consistent metadata, and wrote scripts to load the data into the database and check that everything looks balanced. The web interface uses Bootstrap, and it shows results right away when you search. I also wrote tests for the core functionality and set up the database to run in Docker, which makes it simple to get the project running locally.
 
 ### Project Goals
 
-[Explain the objectives of the project. What NLP/HLT problem were you trying to solve?]
-
-**Key Objectives:**
-1. [Objective 1]
-2. [Objective 2]
-3. [Objective 3]
+The goals aligned with the course objectives and served as something I would actually use. I also wanted to demonstrate the technical skills we were learning in class, like working with databases, building web APIs, and structuring code in a maintainable way. The original assignment had just a few sample poses, so expanding this to a comprehensive searchable catalog felt like a significant first improvement. 
 
 ### Approach and Methodology
 
-[Describe your technical approach. How did you plan to achieve the goals? What methodology did you follow?]
+I worked on this iteratively, starting with the backend and then moving to the frontend. I set up the Flask routes first, created data structures for poses, and built the database layer before worrying about how it would look. Once the API was working, I built the web interface. I wanted the page to feel responsive, so it automatically runs a sample search when it loads and displays results in a clean card layout. While working on the UI, I also put together the dataset. I tested things as I went by making requests to the API and checking that everything worked, and wrote tests to catch problems early. This approach let me make changes and improvements without breaking what was already working.
 
 ---
 
@@ -51,219 +48,157 @@ toc_sticky: true
 
 ### System Architecture
 
-[Describe the overall architecture of your solution. What were the main components?]
+YogaDB follows a three-layer architecture that keeps different concerns separated. The presentation layer is a single `index.html` Jinja2 template rendered by Flask. It loads Bootstrap 5, applies a custom gradient theme, and uses Jinja2 template syntax to render pose cards server-side. The service layer is handled by `YogaService`, which encapsulates business logic like input normalization and mapping database rows to JSON-friendly dictionaries. Flask routes import the service, handle HTTP concerns like validation, logging, and status codes, and delegate the actual data fetching to the service layer. The persistence layer uses `MySQLRepository`, which implements the Repository interface with parameterized SQL queries against a Dockerized MySQL 8 instance. Using dependency injection through the interface allows tests to swap the real repository for a stub, which means I can test service logic without needing MySQL running. This separation makes it easy to iterate on the UI without touching SQL, and to test different parts of the application independently.
 
 ### Dataset
 
-[Describe the data you worked with]
-
-**Data Source:** [Where the data came from]  
-**Size:** [Number of samples, size in MB/GB]  
-**Format:** [JSON, CSV, text files, etc.]  
-**Preprocessing:** [What cleaning and preprocessing you performed]
+The dataset in `data/pose_catalog.json` was generated entirely using ChatGPT-5. I initially wanted to scrape data from yoga websites, but the most organized and useful sites I found didn't allow web scraping, so I decided to respect those policies and use an LLM-generated dataset instead. The catalog contains 100 unique poses, and each entry records English and Sanskrit names, comma-separated pose types, target body parts, and step-by-step instructions. The data starts as a JSON catalog for ingestion, then gets loaded into a MySQL table called `yoga_poses` where everything is stored as normalized strings. The `pose_stats.py` script summarizes coverage so I can confirm the dataset is balanced. Currently 44 poses assist shoulders, 36 support spine mobility, 28 target hamstrings, and the rest cover various other body parts like hips and neck.
 
 ### Technologies and Tools
 
-**Programming Languages:**
-- Python [version]
-
-**Key Libraries and Frameworks:**
-- [Library 1]: [Specific use case]
-- [Library 2]: [Specific use case]
-- [Library 3]: [Specific use case]
-
-**Development Environment:**
-- [Jupyter Notebooks / PyCharm / VS Code]
-- [Version control with Git]
-- [Any other tools]
+- **Programming Languages:** Python 3.11 for backend, scripts, and server-side template rendering.
+- **Libraries & Frameworks:**
+  - `Flask` + `flask-cors` for HTTP routing and cross-origin support.
+  - `mysql-connector-python` for database connectivity.
+  - `Bootstrap` for responsive UI scaffolding.
+  - `Pytest` with stub repositories for unit testing.
+- **Infrastructure & Tooling:** Docker Compose sets up a MySQL database that comes pre-loaded with sample pose data. Logging is configured through Python's `logging.config.dictConfig`. 
 
 ### Code Examples
 
-[Include 3-5 representative code snippets that demonstrate the core functionality and your problem-solving approach.]
-
-#### Example 1: [Data Preprocessing / Model Setup / etc.]
+#### Example 1: Flask Route Handler with Server-Side Rendering
 
 ```python
-# Your code snippet here with clear comments
-def example_function(data):
-    """
-    Description of what this function does.
+@app.route('/', methods=['GET'])
+def index():
+    # Get body_part from query string (form submission)
+    raw_body_part = request.args.get('body-part', '')
+    custom_body_part = request.args.get('custom-body-part', '').strip()
     
-    Args:
-        data: Description
-        
-    Returns:
-        Description
+    # Use custom input if provided, otherwise use dropdown selection
+    body_part_input = custom_body_part if custom_body_part else raw_body_part
+    body_part = body_part_input.strip().lower()
+    
+    poses = []
+    error_message = None
+    
+    # If a search was performed, query the database
+    if body_part:
+        app.logger.info(f"Search request for body part: {body_part}")
+        try:
+            poses = yoga_service.get_poses_by_body_part(body_part)
+            if poses:
+                app.logger.info(f"Found {len(poses)} poses for body part: {body_part}")
+            else:
+                error_message = "No poses found for this body part. Try another focus area."
+        except Exception as exc:
+            app.logger.exception("Unhandled error retrieving poses")
+            error_message = "An error occurred while searching for poses. Please try again."
+    else:
+        # On initial page load, show sample results for "hips"
+        try:
+            poses = yoga_service.get_poses_by_body_part("hips")
+        except Exception as exc:
+            app.logger.exception("Error loading initial sample poses")
+    
+    return render_template("index.html", 
+                         poses=poses, 
+                         selected_body_part=raw_body_part,
+                         custom_body_part=custom_body_part,
+                         error_message=error_message)
+```
+
+This route handles both initial page loads and form submissions. When the user submits the form, it reads the selected dropdown value or custom text input, queries the database through the service layer, and passes the results to the Jinja2 template for server-side rendering. The template displays the poses using Jinja2 loops. If something goes wrong, it catches the error and passes an error message to the template instead of crashing. On the first page load, it automatically shows sample results for "hips" strictly because that's often what I need the most.
+
+#### Example 2: Converting Strings to Lists
+
+```python
+def _split_csv(value: str) -> List[str]:
+    if not value:
+        return []
+    return [segment.strip() for segment in value.split(",") if segment.strip()]
+
+def to_dict(self) -> Dict[str, object]:
+    """Return a JSON-serialisable representation."""
+    return {
+        "english_name": self.english_name,
+        "sanskrit_name": self.sanskrit_name,
+        "pose_type": _split_csv(self.pose_type),
+        "target_body_parts": _split_csv(self.target_body_parts),
+        "instructions": self.instructions,
+    }
+```
+
+The database stores pose types and body parts as comma-separated strings like "Standing, Balance, Strength" or "Hips, Shoulders, Spine". The `_split_csv` helper function converts these strings into Python lists by splitting on commas, removing extra spaces, and filtering out empty values. This makes it easy to iterate over them in the Jinja2 template when rendering pose cards.
+
+#### Example 3: Database Query
+
+```python
+def get_poses_by_body_part(self, body_part: str) -> List[YogaPose]:
+    query = """
+        SELECT english_name, sanskrit_name, pose_type, target_body_parts, instructions
+        FROM yoga_poses
+        WHERE LOWER(target_body_parts) LIKE %s
     """
-    # Implementation with comments
-    pass
+    like_pattern = f"%{body_part.lower()}%"
+    connection = self._get_connection()
+    cursor = connection.cursor(dictionary=True)
+
+    try:
+        cursor.execute(query, (like_pattern,))
+        result = cursor.fetchall()
+        return [YogaPose(**pose) for pose in result]
+    finally:
+        cursor.close()
+        connection.close()
 ```
 
-**Explanation:** [Explain what this code accomplishes, why you wrote it this way, and what challenges it addresses]
+This method searches for poses that target a specific body part. The SQL query uses `LIKE` with a pattern to find matches, and it converts everything to lowercase so the search isn't case-sensitive. The `try/finally` block ensures the database connection and cursor are always closed, even if something goes wrong. This prevents connection leaks that would eventually cause the database to stop accepting new connections.
 
-#### Example 2: [Core Algorithm / Feature Engineering / etc.]
+#### Example 4: Tests
 
 ```python
-# Second code snippet
+def test_get_poses_by_body_part():
+    repository = StubRepository()
+    service = YogaService(repository)
+    pose = build_pose("Core Twist")
+    repository.pose_by_target["hips"] = [pose]
+
+    result = service.get_poses_by_body_part("hips")
+
+    assert result == [pose.to_dict()]
 ```
 
-**Explanation:** [Detailed explanation]
-
-#### Example 3: [Evaluation / Results Processing / etc.]
-
-```python
-# Third code snippet
-```
-
-**Explanation:** [Detailed explanation]
-
-#### Example 4: [Additional example if needed]
-
-```python
-# Fourth code snippet
-```
-
-**Explanation:** [Detailed explanation]
+The tests use a fake repository instead of a real database, so I can test the service logic without needing MySQL running. The test checks that the results come back as dictionaries, which helps catch problems if I change how the data is structured later. Having tests like this means I can make changes to the code without worrying about breaking things.
 
 ---
 
 ## Challenges and Solutions
 
-### Challenge 1: [Title of Challenge]
+### Challenge 1: Converting Comma-Separated Strings to Lists
 
-**The Problem:** [Describe the technical or conceptual challenge you faced]
+The database stores pose types and target body parts as comma-separated strings like "Standing, Balance, Strength", but the Jinja2 template needs these as arrays so it can display them as separate badges. I needed a consistent way to convert these strings to lists while handling edge cases like empty strings, extra spaces, or missing values. I wrote a helper function called `_split_csv` that handles all the edge cases in one place by splitting on commas, stripping whitespace, and filtering out empty strings. This function gets used in the `YogaPose.to_dict()` method to convert the stored strings into clean arrays before passing them to the template. Now the template consistently receives arrays for pose types and body parts, regardless of how the data is formatted in the database.
 
-**My Approach:** [Explain how you tackled it, including research, experimentation, debugging processes]
+### Challenge 2: Case-Insensitive Search with SQL LIKE
 
-**Solution:** [What worked and why]
-
-**Outcome:** [The result and what you learned]
-
-### Challenge 2: [Title]
-
-**The Problem:** [Description]
-
-**My Approach:** [Your process]
-
-**Solution:** [What worked]
-
-**Outcome:** [Results and learning]
-
-### Challenge 3: [Title]
-
-**The Problem:** [Description]
-
-**My Approach:** [Your process]
-
-**Solution:** [What worked]
-
-**Outcome:** [Results and learning]
+When users search for poses, they might type "Hips" or "hips" or "HIPS" and expect to find the same results. The database stores body parts with mixed capitalization, so I needed the SQL query to ignore case differences. I also wanted partial matches to work—if someone types "hip" they should find poses targeting "hips" or "hip flexors". I solved this by using MySQL's `LOWER()` function on both the database column and the search term, then wrapping the search term with wildcards using the `LIKE` operator. So a search for "hip" becomes `%hip%` and matches anything containing those letters regardless of case. This makes the search feel more forgiving and user-friendly, even if people don't type exactly what's stored in the database.
 
 ---
 
-## Learning and Development
+## Results 
 
-### Knowledge Applied from Previous Courses
+Compared to the original assignment, this version is a significant upgrade. The original was a simple API that returned a few hardcoded poses with basic names. Now each pose includes English and Sanskrit names, pose types (such as "Standing, Foundation, Balance"), target body parts, and step-by-step instructions. Instead of five sample poses, there are 100. 
 
-[Discuss what you were able to apply from prior coursework. Be specific.]
-
-- **LING [XXX]:** [Specific concepts or techniques applied]
-- **[Other courses]:** [What you applied]
-- **Undergraduate coursework:** [If applicable]
-
-### New Concepts and Skills
-
-[Discuss what you had to learn specifically for this project.]
-
-1. **[New Skill/Concept 1]:** [How you learned it and how you applied it]
-2. **[New Skill/Concept 2]:** [Learning process and application]
-3. **[New Skill/Concept 3]:** [Learning process and application]
+The scripts I wrote to load data into the database demonstrate good software practices by separating concerns. The data is stored in a JSON file that's easy to edit, the script handles validation and normalization, and it uses the repository pattern to keep database access separate from the data loading logic. This means I can update the pose data without writing SQL, and the script checks for duplicates and validates the data before inserting anything. 
 
 ---
 
-## Results and Evaluation
+## Future Work
 
-### Experimental Setup
+I'm interested in exploring how LLMs could help generate the yoga sequences. Instead of just finding individual poses, users could describe what they want, whether that's a body part or a morning routine, and an LLM could analyze the pose relationships and create a flowing sequence that makes sense. The model could consider which poses complement each other, what order feels natural, and how to creatively transition between poses (one of the best parts of yoga, in my opinion). This would move the app from being a simple lookup tool to something that can actually design custom routines and be useful to instructors and practitioners.
 
-[Describe how you evaluated your system. What metrics did you use? What was your baseline?]
-
-### Results
-
-**Quantitative Results:**
-- [Metric 1]: [Result, e.g., "Accuracy: 87.5%"]
-- [Metric 2]: [Result, e.g., "F1-Score: 0.82"]
-- [Metric 3]: [Result]
-
-[Consider including a table or visualization of results]
-
-**Qualitative Analysis:**
-- [Observation 1 about the results]
-- [Observation 2]
-- [What worked well and what didn't]
-
-### Comparison to Baselines
-
-[How did your approach compare to baseline methods or other approaches?]
+I'm also curious about experimenting with graph databases instead of MySQL. Graph databases have become really popular with LLM applications because they're excellent at representing relationships between entities, and I think that could reveal interesting and counterintuitive ways that poses relate to each other, which body parts they target, and how they flow together. Instead of storing poses in tables, a graph database would represent each pose as a node, and the edges could capture relationships like which poses complement each other, which ones target the same body parts, or which ones make good transitions. This structure would make it easier to discover pose relationships and could work really well with the LLM sequence generation. Plus, I'm interested in learning about different database technologies beyond the relational databases I've used so far, and graphs seem like an interesting next step for this project.
 
 ---
 
-## Project Status and Future Work
-
-### Current State
-
-[Describe the state of the project at completion. What's working? What's implemented?]
-
-### Limitations
-
-[Be honest about limitations of your approach or implementation]
-
-### Future Improvements
-
-[If you continued this project, what would you do next?]
-
-1. [Potential improvement 1]
-2. [Potential improvement 2]
-3. [Potential improvement 3]
-
----
-
-## Demonstration of HLT Learning Outcomes
-
-This project demonstrates all four learning outcomes of the MS in Human Language Technology program:
-
-### 1. Code Development and Documentation
-
-[Explain how this project demonstrates your ability to write, debug, and document code. Provide specific examples.]
-
-### 2. Algorithm Selection and HLT Concepts
-
-[Explain how you selected and applied appropriate algorithms and HLT concepts. Which algorithms did you use and why? What linguistic or computational concepts were central to your approach?]
-
-### 3. Tool and Library Integration
-
-[Discuss how you integrated common HLT tools and libraries. What libraries did you use and how did you apply them? Did you have to integrate multiple tools into a pipeline?]
-
-### 4. Professional Skills
-
-[Describe the professional skills you demonstrated, including problem-solving, critical thinking, clear communication (in code comments, documentation, and this write-up), and if applicable, teamwork.]
-
----
-
-## Reflections
-
-[Personal reflections on the project: What did you find most challenging? Most rewarding? What would you do differently? How has this project influenced your understanding of NLP/HLT?]
-
----
-
-## Additional Resources
-
-- **GitHub Repository:** [Link to cleaned-up repository]
-- **Project Report:** [If you have a separate report or presentation]
-- **Demo:** [If you have a demo or visualization]
-- **Dataset:** [Link if the dataset is publicly available]
-
----
-
-*Project completed: [Completion Date]*  
-*Word count: [Your word count - aim for 1000-3000]*
-
+*Project completed: Summer 2024, Updated October 2025*  

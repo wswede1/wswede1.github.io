@@ -12,24 +12,14 @@ This portfolio showcases my work in Natural Language Processing and Human Langua
 
 ## Projects Featured
 
-1. **Internship Project** - [Brief one-line description]
-2. **LING 508 Course Project** - [Brief one-line description]
+1. **Internship Project** - RAG project using podcast transcripts and Ollama.
+2. **LING 508 Course Project** - A yoga pose database.
 
 ## Built With
 
 - [Jekyll](https://jekyllrb.com/) - Static site generator
 - [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) - Jekyll theme
 - [GitHub Pages](https://pages.github.com/) - Hosting
-
-## Local Development
-
-To run this site locally:
-
-1. Install Ruby and Bundler
-2. Clone this repository
-3. Run `bundle install`
-4. Run `bundle exec jekyll serve`
-5. Open `http://localhost:4000` in your browser
 
 ## Site Structure
 
@@ -49,17 +39,7 @@ To run this site locally:
 └── README.md
 ```
 
-## Contact
-
-- **Email:** your.email@example.com
-- **LinkedIn:** [your-profile](https://linkedin.com/in/yourprofile)
-- **GitHub:** [yourusername](https://github.com/yourusername)
-
-## License
-
-This portfolio is for educational and professional purposes. Code examples from projects may have separate licenses - see individual project repositories.
-
 ---
 
-*Last updated: [Current Date]*
+*Last updated: November 2025*
 
