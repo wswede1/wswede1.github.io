@@ -16,35 +16,24 @@ toc: true
 
 ---
 
-## Education
+## Skills
 
-**Master of Science in Human Language Technology**  
-University of Arizona, Tucson, AZ  
-Expected Graduation Date: Winter 2025
+**Programming Languages:** Python
 
-**Master of Arts in Foreign Languages**  
-Concentration: Spanish & Bilingual-Multicultural Education  
-George Mason University, Fairfax, VA  
-Graduation Date: Spring 2019
+**NLP & Machine Learning:** Large Language Models, Retrieval-Augmented Generation (RAG), Speech Recognition (Whisper), Text Embeddings, Vector Databases
 
-**Bachelor of Arts in Hispanic Languages and Literatures**  
-University of Pittsburgh, Pittsburgh, PA  
-Graduation Date: Spring 2014
+**Frameworks & Libraries:** Flask, FastAPI, Streamlit, LangChain, NLTK, ChromaDB, Pytest
+
+**Tools & Infrastructure:** Docker, MySQL, Git, High-Performance Computing (SLURM)
+
+**Human Languages:** English (Native), Spanish (Fluent), Portuguese (Conversational)
 
 ---
 
 ## Professional Experience
 
-### Spanish Language Teacher
-**Manassas City Public Schools** | Manassas, VA
-September 2025 - Present
-- Design and deliver AI-enhanced Spanish curricula by integrating generative language models for personalized instruction and tutoring.
-- Implement differentiated instruction strategies to meet diverse learner needs, including heritage speakers, English language learners, and students with varying proficiency levels.
-- Utilize formative assessment data to track student progress and adjust instructional strategies.
-- Leverage firsthand international teaching experience in Chile and Spain to integrate authentic cultural materials and perspectives, fostering cross-cultural competency and global awareness.
-
 ### NLP Intern
-**Epistemix** | Remote  
+**[Epistemix](https://www.epistemix.com){:target="_blank"}** | Remote  
 Summer/Fall 2025
 
 - Developed Retrieval Augmented Generation (RAG) system for semantic search over podcast transcripts.
@@ -53,27 +42,53 @@ Summer/Fall 2025
 - Implemented vector database using ChromaDB with BGE-M3 embeddings
 - Integrated Ollama for LLM-powered question answering with citations
 
-### Previous Experience
-
 ### Data Curator & Conversation Agent Designer
-**ASAPP** | Remote
+**[ASAPP](https://www.asapp.com){:target="_blank"}** | Remote  
 April 2022 - June 2025
 
 - Designed and optimized enterprise-grade conversational AI agents using prompt engineering and data-driven interaction design, improving resolution rates across multiple client deployments.
 - Conducted scenario testing and workflow mapping to evaluate agent behavior in real-world customer journeys; iterated configurations based on qualitative insights and quantitative performance metrics.
 - Led large-scale annotation and experimentation projects (speech + text), developing style guides, QA protocols, and vendor management to improve human–AI customer service interactions.
 
+### Spanish Language Teacher
+**Manassas City Public Schools** | Manassas, VA  
+September 2025 - Present
+
+- Design and deliver AI-enhanced Spanish curricula by integrating generative language models for personalized instruction and tutoring.
+- Implement differentiated instruction strategies to meet diverse learner needs, including heritage speakers, English language learners, and students with varying proficiency levels.
+- Utilize formative assessment data to track student progress and adjust instructional strategies.
+- Leverage firsthand international teaching experience in Chile and Spain to integrate authentic cultural materials and perspectives, fostering cross-cultural competency and global awareness.
+
+### Previous Experience
+
 ### Graduate Teaching Assistant
-**George Mason University & University of Arizona** | Fairfax, VA & Tucson, AZ
+**George Mason University & University of Arizona** | Fairfax, VA & Tucson, AZ  
 August 2017 - December 2018, August 2020 - October 2021
 
 ### Spanish Language Teacher
-**Prince William County Public Schools** | Manassas, VA
+**Prince William County Public Schools** | Manassas, VA  
 August 2016 - June 2017, August 2018 - June 2019
 
 ### English Language Teacher
 **Liceo Comercial Armando Bravo Bravo / CEIP Luis Vives** | Angol, Chile and Silla, Spain  
 July - December 2015, September 2019 - June 2020
+
+---
+
+## Education
+
+**Master of Science in Human Language Technology**  
+[University of Arizona](https://linguistics.arizona.edu/ms-hlt){:target="_blank"}, Tucson, AZ  
+Expected Graduation Date: Winter 2025
+
+**Master of Arts in Foreign Languages**  
+Concentration: Spanish & Bilingual-Multicultural Education  
+[George Mason University](https://www.gmu.edu){:target="_blank"}, Fairfax, VA  
+Graduation Date: Spring 2019
+
+**Bachelor of Arts in Hispanic Languages and Literatures**  
+[University of Pittsburgh](https://www.pitt.edu){:target="_blank"}, Pittsburgh, PA  
+Graduation Date: Spring 2014
 
 ---
 
@@ -102,19 +117,10 @@ July - December 2015, September 2019 - June 2020
 
 ---
 
-## Languages
-
-- English: Native
-- Spanish: Fluent
-- Portuguese: Conversational
-
----
-
 ## References
 
 Available upon request
 
 ---
 
-*Last Updated: November 2025*
-
+*Last Updated: December 2025*
