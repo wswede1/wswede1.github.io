@@ -12,7 +12,7 @@ header:
       url: "/cv/"
     - label: "View Projects"
       url: "/projects/"
-excerpt: "Linguist | Educator"
+excerpt: "Linguist · Educator"
 ---
 
 # Introduction
@@ -53,4 +53,3 @@ Explore my work in Human Language Technology through detailed project descriptio
 ## Get In Touch
 
 I'm always interested in connecting with fellow NLP practitioners and exploring new opportunities. Feel free to reach out via [email](mailto:wade.swede91@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/wade-swede-601baa99/).
-
