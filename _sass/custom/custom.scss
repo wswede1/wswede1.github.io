@@ -18,15 +18,20 @@ td {
   color: rgba(255, 255, 255, 1) !important;
 }
 
-/* Hero section table cells */
+/* Hero section table cells - force white text */
+.page__hero--overlay table,
+.page__hero--overlay table tbody,
+.page__hero--overlay table tbody tr,
+.page__hero--overlay table tbody tr td,
 .page__hero--overlay td,
 .page__hero--overlay th,
-.page__hero--overlay table,
 .page__hero--overlay .wrapper table,
 .page__hero--overlay .wrapper table td,
 .initial-content .page__hero--overlay table,
-.initial-content .page__hero--overlay table td {
-  color: white !important;
+.initial-content .page__hero--overlay table td,
+div.page__hero--overlay table td {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
 
 /* Code block wrapping */
