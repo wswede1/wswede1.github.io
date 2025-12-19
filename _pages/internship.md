@@ -34,7 +34,11 @@ The project involved transcribing podcast episodes using Whisper on the universi
 
 ## Technical Implementation
 
-The system follows a typical RAG pipeline: **Audio → Transcription → Chunking → Embeddings → Vector Storage → Retrieval → Answer Generation**
+The system follows a typical RAG architecture with two distinct phases:
+
+**Indexing Phase (one-time setup):** Audio → Transcription → Chunking → Embeddings → Vector Storage
+
+**Query Phase (per-request):** User Query → Retrieval → Answer Generation
 
 ### 1. Data Ingestion & Transcription
 I built scripts to parse podcast RSS feeds, extract episode metadata (title, audio URL, duration, publish date), and download the audio files. For transcription, I wanted to use OpenAI's Whisper model because we had explored this model in the advanced speech technology class. In order to speed up transcription, I used the university HPC and processed 24 episodes with timestamps and speaker detection stored in JSON format.

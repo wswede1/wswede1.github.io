@@ -94,26 +94,17 @@ Graduation Date: Spring 2014
 
 ## Graduate Coursework
 
-**Core HLT Coursework**
+**NLP & Computational Linguistics**  
+Machine learning for NLP, statistical methods, text processing, information extraction, and language modeling.
 
-- LING 503: Syntax I
-- LING 508: Computational Techniques for Linguists
-- LING 529: HLT I
-- LING 538: Computational Linguistics
-- LING 539: HLT II
-- LING 578: Speech Language Technology
-- LING 581: Advanced Computational Linguistics
-- LING 582: Advanced Statistical NLP
-- LING 696: Advanced Speech and Language Technology
+**Speech & Audio Technology**  
+Automatic speech recognition, text-to-speech synthesis, and audio processing pipelines.
 
-**Supporting Courses:**
+**Foundational Linguistics & Programming**  
+Formal syntax, computational techniques, database design, and API development.
 
-- SPAN 574A: Heritage Language Research
-- SPAN 580A: Spanish Phonology I
-- SPAN 580B: Spanish Phonology II
-- SPAN 581A: Foreign Language Teaching Theory and Methodology
-- SPAN 583A: Spanish Phonetics
-- SPAN 587A: Introduction to Pragmatics
+**Spanish Linguistics**  
+Phonetics, phonology, pragmatics, heritage language research, and language teaching methodology.
 
 ---
 

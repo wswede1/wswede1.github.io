@@ -4,3 +4,14 @@
   color: white !important;
 }
 
+td {
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Code block wrapping */
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
