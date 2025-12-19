@@ -15,7 +15,14 @@
 }
 
 td {
-  color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+/* Hero section table cells */
+.page__hero--overlay td,
+.page__hero--overlay th,
+.page__hero--overlay table {
+  color: white !important;
 }
 
 /* Code block wrapping */
