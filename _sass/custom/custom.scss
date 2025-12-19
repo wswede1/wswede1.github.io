@@ -21,7 +21,11 @@ td {
 /* Hero section table cells */
 .page__hero--overlay td,
 .page__hero--overlay th,
-.page__hero--overlay table {
+.page__hero--overlay table,
+.page__hero--overlay .wrapper table,
+.page__hero--overlay .wrapper table td,
+.initial-content .page__hero--overlay table,
+.initial-content .page__hero--overlay table td {
   color: white !important;
 }
 
