@@ -1,0 +1,8 @@
+{% comment %}
+  Card grid for any list of collection documents.
+  Usage: {% include card-grid.html items=some_list %}
+  Uses the theme's archive-single.html, which reads the loop variable `post`.
+{% endcomment %}
+<div class="grid__wrapper">
+{% for post in include.items %}{% include archive-single.html type="grid" %}{% endfor %}
+</div>

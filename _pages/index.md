@@ -1,55 +1,52 @@
 ---
-layout: home
-author_profile: true
+layout: splash
 permalink: /
-title: "Wade A. Swede"
+title: "Wade Swede"
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
-  overlay_image: /assets/images/header.jpg
+  overlay_color: "#1f3a4d"
   actions:
-    - label: "View CV"
-      url: "/cv/"
-    - label: "View Projects"
+    - label: "See My Projects"
       url: "/projects/"
-excerpt: "Linguist · Educator"
+    - label: "Resources for Teachers"
+      url: "/resources/"
+excerpt: 'Linguist \| Educator'  # \| keeps Markdown from reading the pipe as a table
+feature_row:
+  - title: "AI & NLP Projects"
+    excerpt: "Retrieval-augmented generation, language technology, speech synthesis, and machine learning."
+    url: "/projects/#ai-nlp"
+    btn_label: "Browse Projects"
+    btn_class: "btn--primary"
+  - title: "Educational Technology"
+    excerpt: "Classroom applications and instructional tools, including games for Spanish instruction."
+    url: "/projects/#edtech"
+    btn_label: "Browse EdTech"
+    btn_class: "btn--primary"
+  - title: "Resources for Teachers"
+    excerpt: "Reusable classroom tools, templates, prompts, AI agent skills, and professional development."
+    url: "/resources/"
+    btn_label: "Browse Resources"
+    btn_class: "btn--primary"
 ---
 
-# Introduction
+{% include feature_row %}
 
-I am a graduate student at the University of Arizona pursuing an MS in Human Language Technology (HLT), as well as a full-time Spanish teacher. After earning my BA in Spanish from the University of Pittsburgh (H2P!), I spent several years teaching both Spanish and English. I've worked in public schools in Southern Chile, Spain, and middle and high schools in Northern Virginia. I also served as a graduate teaching assistant at both George Mason University and the University of Arizona.
+{% assign featured = site.projects | where: "featured", true | sort: "order", "last" %}
+{% if featured.size > 0 %}
+<h2 class="home-section__title">Featured projects</h2>
+{% include card-grid.html items=featured %}
+{% endif %}
 
-After six years in the classroom, I decided to pivot toward technology and accepted a position in Data Curation at a small startup. My responsibilities began with data annotation for traditional machine learning models, and I eventually expanded into designing tasks and tools for the company's enterprise-grade flagship AI agent. This role immersed me in the rapidly evolving world of large language models, where I performed quality assurance on model outputs and served as the human-in-the-loop for model refinement. This hands-on experience with cutting-edge NLP systems and observing their capabilities and limitations firsthand sparked my interest in formally studying Human Language Technology.
+{% assign recent_resources = site.resources | sort: "last_updated", "first" | reverse %}
+{% if recent_resources.size > 0 %}
+<h2 class="home-section__title">New resources</h2>
+{% assign recent_resources = recent_resources | slice: 0, 3 %}
+{% include card-grid.html items=recent_resources %}
+{% endif %}
 
-As I complete the HLT program at the University of Arizona, I have returned to the classroom to teach Spanish at a local middle school. This position allows me to share my enthusiasm for language while also educating the next generation (and co-workers) about responsible AI usage. My technical training in HLT at the UofA and my experience working directly with these systems in industry have given me a deep appreciation for how people interact with these technologies.
+{% if site.posts.size > 0 %}
+<h2 class="home-section__title">Latest writing</h2>
+{% for post in site.posts limit:3 %}{% include archive-single.html %}{% endfor %}
+{% endif %}
 
-## HLT Experience
-
-During my time in the MS HLT program, I have gained valuable practical experience through coursework and a professional internship. For my internship, I worked on a RAG system for Epistemix, a tech startup based in Pittsburgh, PA. Epistemix is a simulation and predictive analytics company that builds agent-based models and synthetic populations to help organizations make confident decisions in uncertain scenarios. Their work informs strategic planning in areas like precision public health, consumer behavior, and resource allocation by modeling complex population dynamics. The intention for the RAG system was to allow users to search and answer questions about the company, further promote their mission, and evangelize their methods and insights. The data used in this project came from the company podcast, "The Flux."
-
-Another project I particularly enjoyed during my time in the HLT program was a yoga pose recommendation system that allows users to find appropriate poses based on targeted body areas.
-
-## Career Goals
-
-My professional interests center on practical applications of NLP that solve real-world problems, particularly in education. Technology has provided countless educational opportunities to people all across the globe, and I look forward to making a meaningful contribution to that effort.
-
-
-## Personal
-When I'm not teaching or reading the latest research, I spend my time obsessing over making the perfect home-cooked meal, doing yoga, and exploring local trails with my dog.
-
----
-
-## Featured Projects
-
-Explore my work in Human Language Technology through detailed project descriptions:
-
-- **[Internship Project](/projects/internship/)** - RAG System for Podcast Transcripts
-- **[LING 508 Project](/projects/ling508/)** - Yoga Pose Recommendation System
-
-[View all projects →](/projects/)
-
----
-
-## Get In Touch
-
-I'm always interested in connecting with fellow NLP practitioners and exploring new opportunities. Feel free to reach out via [email](mailto:wade.swede91@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/wade-swede-601baa99/).
+<h2 class="home-section__title">Get in touch</h2>
+<p>I'm always glad to connect with NLP practitioners and educators. Reach out by <a href="mailto:wade.swede91@gmail.com">email</a>, connect on <a href="https://www.linkedin.com/in/wade-swede-601baa99/">LinkedIn</a>, or find my code on <a href="https://github.com/wswede1">GitHub</a>.</p>

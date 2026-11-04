@@ -1,0 +1,14 @@
+# Top navigation (Minimal Mistakes reads `main` for the masthead links)
+main:
+  - title: "Home"
+    url: /
+  - title: "Projects"
+    url: /projects/
+  - title: "Resources"
+    url: /resources/
+  - title: "Writing"
+    url: /writing/
+  - title: "About"
+    url: /about/
+  - title: "CV"
+    url: /cv/

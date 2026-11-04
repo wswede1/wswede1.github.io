@@ -1,0 +1,20 @@
+{% assign r = page %}
+{% assign rtype = site.data.taxonomy.resource_types | where: "id", r.resource_type | first %}
+<div class="notice meta-box">
+  <dl>
+    {% if rtype %}<dt>Type</dt><dd>{{ rtype.title }}</dd>{% endif %}
+    {% if r.audience %}<dt>For</dt><dd>{{ r.audience }}</dd>{% endif %}
+    {% if r.subjects %}<dt>Subject</dt><dd>{{ r.subjects | join: ", " }}</dd>{% endif %}
+    {% if r.levels %}<dt>Level</dt><dd>{{ r.levels | join: ", " }}</dd>{% endif %}
+    {% if r.works_with %}<dt>Works with</dt><dd>{{ r.works_with | join: ", " }}</dd>{% endif %}
+    {% if r.duration %}<dt>Length</dt><dd>{{ r.duration }}</dd>{% endif %}
+    {% if r.license %}<dt>License</dt><dd>{{ r.license }}</dd>{% endif %}
+    {% if r.last_updated %}<dt>Updated</dt><dd>{{ r.last_updated | date: "%B %-d, %Y" }}</dd>{% endif %}
+  </dl>
+  {% if r.downloads or r.links %}
+  <p class="meta-box__links">
+    {% for d in r.downloads %}<a class="btn btn--primary btn--small" href="{{ d.file | relative_url }}" download><i class="fas fa-download" aria-hidden="true"></i> {{ d.label }}</a> {% endfor %}
+    {% for link in r.links %}<a class="btn btn--inverse btn--small" href="{{ link.url | relative_url }}">{{ link.label }}</a> {% endfor %}
+  </p>
+  {% endif %}
+</div>

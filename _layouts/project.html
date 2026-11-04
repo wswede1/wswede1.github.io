@@ -1,0 +1,10 @@
+---
+layout: single
+---
+{% comment %}
+  Project case study layout. Wraps the theme's `single` layout and adds a
+  summary box built from front matter (see _templates/project.md).
+{% endcomment %}
+{% include project-meta.html %}
+
+{{ content }}

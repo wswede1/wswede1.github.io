@@ -1,9 +1,10 @@
 # Site Settings
-title: "HLT Portfolio"
+title: "Wade Swede"
 name: "Wade Swede"
 email: wade.swede91@gmail.com
 description: >-
-  Portfolio website showcasing Human Language Technology projects and professional work.
+  Linguist and educator. Language technology, educational technology, and
+  resources for language teachers.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://wswede1.github.io" # the base hostname & protocol for your site
 repository: "wswede1/wswede1.github.io"
@@ -26,12 +27,13 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-remote-theme
 
 # Site Author
 author:
   name: "Wade Swede"
   avatar: "/assets/images/profile.jpg" # path to profile image
-  bio: "MS in Human Language Technology | NLP and Computational Linguistics"
+  bio: 'Linguist \| Educator'  # \| keeps Markdown from reading the pipe as a table
   location: "Northern Virginia"
   email: wade.swede91@gmail.com
   links:
@@ -41,6 +43,16 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/wade-swede-601baa99/" 
+
+# Site Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/wswede1"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/wade-swede-601baa99/"
 
 # Defaults
 defaults:
@@ -55,6 +67,23 @@ defaults:
       comments: false
       share: true
       related: true
+      permalink: /writing/:title/
+  # _projects (case studies)
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+      author_profile: true
+      share: false
+  # _resources (teacher resources, agent skills, PD)
+  - scope:
+      path: ""
+      type: resources
+    values:
+      layout: resource
+      author_profile: true
+      share: false
   # _pages
   - scope:
       path: "_pages"
@@ -68,7 +97,22 @@ collections:
   projects:
     output: true
     permalink: /:collection/:path/
+  resources:
+    output: true
+    permalink: /:collection/:path/
 
 include:
   - _pages
+
+# Not part of the built site (starter templates live in _templates/, which
+# Jekyll skips automatically because it starts with an underscore)
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - .jekyll-cache
+  - .sass-cache
+  - node_modules
 

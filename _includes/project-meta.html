@@ -1,0 +1,18 @@
+{% assign p = page %}
+{% assign area = site.data.taxonomy.project_areas | where: "id", p.project_area | first %}
+<div class="notice meta-box">
+  <dl>
+    {% if area %}<dt>Area</dt><dd>{{ area.title }}</dd>{% endif %}
+    {% if p.organization %}<dt>Organization</dt><dd>{{ p.organization }}</dd>{% endif %}
+    {% if p.course %}<dt>Course</dt><dd>{{ p.course }}</dd>{% endif %}
+    {% if p.role %}<dt>Role</dt><dd>{{ p.role }}</dd>{% endif %}
+    {% if p.timeframe %}<dt>When</dt><dd>{{ p.timeframe }}</dd>{% endif %}
+    {% if p.status %}<dt>Status</dt><dd>{{ p.status }}</dd>{% endif %}
+    {% if p.tech %}<dt>Built with</dt><dd>{{ p.tech | join: ", " }}</dd>{% endif %}
+  </dl>
+  {% if p.links %}
+  <p class="meta-box__links">
+    {% for link in p.links %}<a class="btn btn--primary btn--small" href="{{ link.url | relative_url }}">{{ link.label }}</a> {% endfor %}
+  </p>
+  {% endif %}
+</div>

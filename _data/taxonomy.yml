@@ -1,0 +1,27 @@
+# Categories used by the Projects and Resources pages.
+# Order here = order of sections on the page. Empty sections are hidden.
+
+project_areas:
+  - id: ai-nlp
+    title: "AI & NLP"
+    description: "Retrieval-augmented generation, language technology, speech, and machine learning."
+  - id: edtech
+    title: "Educational Technology"
+    description: "Classroom applications and instructional tools, including games for Spanish instruction."
+
+resource_types:
+  - id: classroom-tool
+    title: "Classroom Tools"
+    description: "Ready-to-use tools and activities for language classrooms."
+  - id: template
+    title: "Templates & Guides"
+    description: "Reusable materials, templates, and how-to guides."
+  - id: prompt
+    title: "Prompts"
+    description: "Tested prompts for planning, feedback, and materials creation."
+  - id: agent-skill
+    title: "AI Agent Skills"
+    description: "Downloadable skills and workflows for AI agents, for teachers and developers."
+  - id: workshop
+    title: "Professional Development"
+    description: "Workshops and micro-PD sessions, with slides and materials."

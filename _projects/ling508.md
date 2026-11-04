@@ -1,20 +1,20 @@
 ---
+title: "YogaDB: Yoga Pose Finder"
 permalink: /projects/ling508/
-title: "YogaDB | LING 508 Project"
-layout: single
-author_profile: true
+project_area: ai-nlp
+featured: true
+order: 2
+excerpt: "A full-stack Flask and MySQL app for finding yoga poses by the body part they target, with 100 curated poses in English and Sanskrit."
+course: "LING 508 – Computational Techniques for Linguists"
+timeframe: "Summer 2024"
+tech: [Python 3.11, Flask, MySQL 8, Bootstrap 5, Docker, Pytest]
+links:
+  - label: "Code on GitHub"
+    url: "https://github.com/wswede1/yoga_project"
 toc: true
 toc_label: "Contents"
 toc_sticky: true
 ---
-
-# YogaDB
-
-**Course:** LING 508 – Computational Techniques for Linguists  
-**Semester:** Summer 2024  
-
----
-
 ## Summary & Motivation
 
 YogaDB is the modernized version of my final class assignment for LING 508, Computational Techniques for Linguists. This updated version maintains much of the original Flask application, and has an improved UI and an updated database of 100 yoga poses. The project began as a simple API that returned a yoga pose matching the body part the user selected.

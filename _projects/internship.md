@@ -1,21 +1,18 @@
 ---
+title: "RAG System for Podcast Transcripts"
 permalink: /projects/internship/
-title: "Internship Project: RAG System for Podcast Transcripts"
-layout: single
-author_profile: true
+project_area: ai-nlp
+featured: true
+order: 1
+excerpt: "Semantic search and question answering over a company podcast, with timecode citations. Built with Whisper, ChromaDB, FastAPI, and Streamlit."
+organization: "Epistemix"
+role: "NLP Intern"
+timeframe: "Summer/Fall 2025"
+tech: [Python, FastAPI, Streamlit, ChromaDB, LangChain, OpenAI Whisper, Ollama, BGE-M3 embeddings]
 toc: true
 toc_label: "Contents"
 toc_sticky: true
 ---
-
-# RAG System for Podcast Transcripts
-
-**Organization:** Epistemix  
-**Duration:** Summer/Fall 2025  
-**Role:** NLP Intern  
-
----
-
 ## Motivation
 
 As a second language speaker, I have always been fascinated by language variation, especially the phonetic variation of Spanish. This interest naturally led me to speech technologies during my HLT coursework, where I trained a VITS text-to-speech model on Galician, a language spoken in Northwest Spain. This project introduced me to the technical challenges and creative solutions in audio and speech data processing. I'm also an avid podcast listener, and I love how podcasts make complex information accessible and engaging. While I was searching for an internship, I thought it would be a fun challenge to do something with podcast transcripts.

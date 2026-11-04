@@ -4,3 +4,45 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
+
+/* Summary box on project and resource pages (_includes/*-meta.html) */
+.meta-box {
+  dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.25em 1em;
+    margin: 0;
+    font-size: $type-size-6;
+  }
+  dt,
+  dd {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 0;
+  }
+  dt {
+    font-weight: bold;
+  }
+  .meta-box__links {
+    margin: 1em 0 0;
+  }
+  @media (max-width: 480px) {
+    dl { grid-template-columns: 1fr; }
+    dd { margin-bottom: 0.5em; }
+  }
+}
+
+/* Section headings on the splash homepage */
+.home-section__title {
+  margin-top: 2em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid $border-color;
+}
+
+/* Card grids: contain the floated cards so following content starts below */
+.grid__wrapper {
+  display: flow-root;
+}
+.grid__wrapper .archive__item-title {
+  margin-top: 0.5em;
+}

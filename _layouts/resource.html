@@ -1,0 +1,11 @@
+---
+layout: single
+---
+{% comment %}
+  Teacher resource / agent skill / PD layout. Wraps the theme's `single`
+  layout and adds a summary box with download buttons built from front
+  matter (see _templates/resource.md and _templates/agent-skill.md).
+{% endcomment %}
+{% include resource-meta.html %}
+
+{{ content }}
