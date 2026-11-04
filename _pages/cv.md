@@ -79,7 +79,7 @@ July - December 2015, September 2019 - June 2020
 
 **Master of Science in Human Language Technology**  
 [University of Arizona](https://linguistics.arizona.edu/ms-hlt){:target="_blank"}, Tucson, AZ  
-Expected Graduation Date: Winter 2025
+Graduation Date: May 2026
 
 **Master of Arts in Foreign Languages**  
 Concentration: Spanish & Bilingual-Multicultural Education  
@@ -114,4 +114,4 @@ Available upon request
 
 ---
 
-*Last Updated: December 2025*
+*Last Updated: November 2026*
