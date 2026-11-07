@@ -29,7 +29,70 @@ The games are public at **[wswede1.github.io/spanish-vocab-games](https://wswede
 
 {% include figure popup=true image_path="/assets/images/projects/classroom-game-suite/landing.jpg" alt="Landing page of the games site titled ¡Conoce a Colombia!, with a card for Español 1 (87 words, 6 themes) and Español 2 (33 words, 5 themes), each with a Jugar button, and a panel listing the 26 games in each level grouped as Vocab, Listen, Read, Grammar, Write, Arcade, and Culture." caption="The public landing page. Students pick a level; the 26 games are the same in both levels, but the vocabulary is different." %}
 
-## The problem
+## What's in the suite
+
+### Two levels, one unit
+
+| Level | Vocabulary (All unit deck) | Themes |
+|---|---|---|
+| Spanish 1 | 87 words | Colombia & Culture, -ER / -IR Verbs, Gustar & Opinions, Estar & Location, Ir, Emotions & Places, Vocabulario (school and classroom words) |
+| Spanish 2 | 33 words | Colombia & Travel, Preterite (-AR), -CAR / -GAR / -ZAR, Y-Verbs (preterite), Stem -IR & irregulars |
+
+Students open a level, pick the **All unit** deck or one or more themes, and then pick a game. Their score and streak show above every game.
+
+### 26 game modes per level
+
+The modes are grouped by skill, so students meet the same words through recognition, recall, listening, speaking, grammar, and writing:
+
+| Group | Modes |
+|---|---|
+| Vocab | Flashcards, Quiz, Match, Scramble, Hangman, Whack-a-Word, Memory, Word Search, Crossword, Chain |
+| Listen | Listen, Echo (record yourself and compare), Odd One Out |
+| Read | Fill in the Blank, True/False |
+| Grammar | Conjugation Blitz, Sort It, Build a Sentence, Gender |
+| Write | Translation, Prompt Response, Mad Libs |
+| Arcade | Falling Words, Quiz Race, Boss Battle |
+| Culture | Dialogue |
+
+<figure class="half">
+  <a href="/assets/images/projects/classroom-game-suite/sp1-flashcards.jpg"><img src="/assets/images/projects/classroom-game-suite/sp1-flashcards.jpg" alt="Spanish 1 flashcard mode showing the word Colombia, a speaker button for audio, and Study, Know, and Shuffle buttons, with theme chips and a scrolling bar of game modes above."></a>
+  <a href="/assets/images/projects/classroom-game-suite/sp1-quiz.jpg"><img src="/assets/images/projects/classroom-game-suite/sp1-quiz.jpg" alt="Spanish 1 quiz mode asking how to say 'the pencil' in Spanish, with four choices: el lápiz, al lado (de), beber, and el salón."></a>
+  <figcaption>Flashcards with recorded audio, and a multiple-choice quiz. The theme chips at the top choose the deck; the bar below them chooses the game.</figcaption>
+</figure>
+
+<figure class="half">
+  <a href="/assets/images/projects/classroom-game-suite/sp2-conjugation.jpg"><img src="/assets/images/projects/classroom-game-suite/sp2-conjugation.jpg" alt="Spanish 2 Conjugation Blitz asking the student to conjugate viajar for tú in the preterite tense, with a text box and a Check button."></a>
+  <a href="/assets/images/projects/classroom-game-suite/sp2-boss.jpg"><img src="/assets/images/projects/classroom-game-suite/sp2-boss.jpg" alt="Spanish 2 Boss Battle with a parrot boss, health bars for the boss and the player, and the word el equipaje with answer choices luggage, they said, and they believed."></a>
+  <figcaption>Spanish 2: Conjugation Blitz in the preterite (here with <em>viajar</em>, one of the words added in November 2026), and Boss Battle.</figcaption>
+</figure>
+
+### One word list behind every game
+
+Each level's vocabulary is a single file of Spanish–English pairs grouped into themes. Every game reads from that list, so a word added to the file shows up in all 26 games at once. Games that need more than a pair get it from the same data: *Gender* uses the *el/la* nouns, *Conjugation Blitz* uses the infinitives (present tense in Spanish 1, preterite in Spanish 2), and *Sort It* uses the theme names. Typed answers are checked without regard to accents or capitals, so `montana` counts for *montaña*, and the feedback always shows the correct spelling.
+
+### Audio
+
+Every word has a pre-recorded neural text-to-speech pronunciation in Spanish. If a recording is missing or won't play, the game uses the browser's own Spanish voice instead. *Listen*, *Echo*, and *Odd One Out* build whole games around hearing and saying the words.
+
+### Privacy and devices
+
+- **No account, no sign-in, no analytics.** Students just open the page.
+- **Progress stays on the device,** in the browser's own storage. The games don't send student data to any server I run.
+- **Built for school Chromebooks,** and responsive for phones and tablets.
+
+<figure style="max-width: 320px;">
+  <a href="/assets/images/projects/classroom-game-suite/sp1-quiz-mobile.jpg"><img src="/assets/images/projects/classroom-game-suite/sp1-quiz-mobile.jpg" alt="The Spanish 1 quiz on a phone-sized screen: the theme chips wrap onto several lines, the game bar scrolls sideways, and the question 'coast' has four large answer buttons, one of which is la costa."></a>
+  <figcaption>The Spanish 1 quiz on a phone-sized screen.</figcaption>
+</figure>
+
+### Try it
+
+- **Play:** [wswede1.github.io/spanish-vocab-games](https://wswede1.github.io/spanish-vocab-games/)
+- **Public code:** [github.com/wswede1/spanish-vocab-games](https://github.com/wswede1/spanish-vocab-games)
+
+The rest of this page covers why I built it and how it works under the hood.
+
+## Why I built it
 
 The vocabulary for a unit lives in many places: the textbook list, the slides, the worksheets, and any online practice tools. Each tool needs its own copy of the list. That leads to a few problems I wanted to solve:
 
@@ -45,11 +108,6 @@ My goal was one place where students could practice exactly the words we were st
 - **Students:** high-school Spanish 1 and Spanish 2 learners on school Chromebooks. The pages are also responsive, so they work on phones and tablets.
 - **Teacher:** me. I needed to update the vocabulary quickly during a unit, without editing any game code.
 - **How it's used:** independent practice and review during the Colombia unit. Students choose a level, one or more themes (for example *Colombia & Culture* or *-ER / -IR Verbs*), and a game.
-
-<figure style="max-width: 320px;">
-  <a href="/assets/images/projects/classroom-game-suite/sp1-quiz-mobile.jpg"><img src="/assets/images/projects/classroom-game-suite/sp1-quiz-mobile.jpg" alt="The Spanish 1 quiz on a phone-sized screen: the theme chips wrap onto several lines, the game bar scrolls sideways, and the question 'coast' has four large answer buttons, one of which is la costa."></a>
-  <figcaption>The same quiz on a phone-sized screen.</figcaption>
-</figure>
 
 ## My role
 
@@ -83,32 +141,6 @@ Some games get extra information from the same simple data, so I never have to t
 - **Word Search, Crossword, and Hangman** strip the article and use only the letters.
 
 This means a teacher only needs to edit a word list, not game code. In November 2026 I added 11 Spanish 1 words and 8 Spanish 2 words by editing the two data files. No game code changed for the new words to appear in all modes.
-
-### Many kinds of practice with the same words
-
-The 26 modes are grouped by skill, so students practice recognition, recall, listening, speaking, and production with the same set of words:
-
-| Group | Modes |
-|---|---|
-| Vocab | Flashcards, Quiz, Match, Scramble, Hangman, Whack-a-Word, Memory, Word Search, Crossword, Chain |
-| Listen | Listen, Echo (record yourself and compare), Odd One Out |
-| Read | Fill in the Blank, True/False |
-| Grammar | Conjugation Blitz, Sort It, Build a Sentence, Gender |
-| Write | Translation, Prompt Response, Mad Libs |
-| Arcade | Falling Words, Quiz Race, Boss Battle |
-| Culture | Dialogue |
-
-<figure class="half">
-  <a href="/assets/images/projects/classroom-game-suite/sp1-flashcards.jpg"><img src="/assets/images/projects/classroom-game-suite/sp1-flashcards.jpg" alt="Spanish 1 flashcard mode showing the word Colombia, a speaker button for audio, and Study, Know, and Shuffle buttons, with theme chips and a scrolling bar of game modes above."></a>
-  <a href="/assets/images/projects/classroom-game-suite/sp1-quiz.jpg"><img src="/assets/images/projects/classroom-game-suite/sp1-quiz.jpg" alt="Spanish 1 quiz mode asking how to say 'the pencil' in Spanish, with four choices: el lápiz, al lado (de), beber, and el salón."></a>
-  <figcaption>Flashcards with recorded audio, and a multiple-choice quiz. The theme chips at the top choose the deck; the bar below them chooses the game.</figcaption>
-</figure>
-
-<figure class="half">
-  <a href="/assets/images/projects/classroom-game-suite/sp2-conjugation.jpg"><img src="/assets/images/projects/classroom-game-suite/sp2-conjugation.jpg" alt="Spanish 2 Conjugation Blitz asking the student to conjugate viajar for tú in the preterite tense, with a text box and a Check button."></a>
-  <a href="/assets/images/projects/classroom-game-suite/sp2-boss.jpg"><img src="/assets/images/projects/classroom-game-suite/sp2-boss.jpg" alt="Spanish 2 Boss Battle with a parrot boss, health bars for the boss and the player, and the word el equipaje with answer choices luggage, they said, and they believed."></a>
-  <figcaption>Spanish 2: Conjugation Blitz in the preterite (here with <em>viajar</em>, one of the words added in November 2026), and Boss Battle.</figcaption>
-</figure>
 
 ### Accent-insensitive answer checking
 
